@@ -6,4 +6,138 @@
 
 body {
     font-family: sans-serif;
+    background-color: #f1f5f8;
+}
+
+.container {
+    height: 10vh;
+    
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 40px;
+    position: relative;
+}
+
+.nav {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    width: 400px;
+    height: 100vh;
+    transform: translateX(-400px);
+    transition: all .5s;
+}
+
+.nav-appear {
+    transform: translateX(0);
+}
+
+.line {
+    width: 1.8rem;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #49a6e9;
+    margin: 5px;
+}
+
+.burger {
+    cursor: pointer;
+    /* background-color: salmon; */
+    animation: jump 1s linear infinite alternate;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    margin-bottom: 50px;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cross {
+    cursor: pointer;
+    transition: all 1s;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4px;
+}
+
+.cross:hover {
+    transform: rotateZ(720deg);
+}
+
+.line--cross {
+    background-color: #bb2525;
+    width: 1.5rem;
+    margin: 0;
+}
+
+.line--cross-1 {
+    transform: rotate(-45deg);
+}
+
+.line--cross-2 {
+    transform: translateY(-5px) rotate(45deg);
+}
+
+
+.main-list {
+    list-style: none;
+}
+
+.link {
+    display: block;
+    text-decoration: none;
+    color: #617d98;
+    font-size: 23px;
+    padding: 22px 25px;
+    transition: all .4s;
+}
+
+.link:hover {
+    background-color: #b7dbf7;
+    color: #49a6e9;
+    padding: 22px 28px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 160px;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    fill: #49a6e9;
+}
+
+.icon:not(:last-child) {
+    margin-right: 15px;
+}
+
+@keyframes jump{
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform : scale(1.3);
+    }
 }
